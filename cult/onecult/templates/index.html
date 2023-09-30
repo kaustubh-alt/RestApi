@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"/>
+    <title>Document</title>
+</head>
+<style>
+    body{
+    display:grid;
+    place-items:center;
+    }
+    div{
+    padding:15px;
+
+    width:300px;
+    border-radius:5px;
+    background-color:white;
+    text-align:left;
+    background-color:#1976ff;
+    background-image:linear-gradient(130deg,rgb(176, 208, 255, 0.4),#003583)
+    }
+    label{
+    padding-inline-start:10px;
+    }
+    .btn {
+            background-image: linear-gradient(to right, #f26363 0%, #4d4af7  51%, #4ac9f7  100%);
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 250% auto;
+            color: white;
+            border-radius: 10px;
+            display: block;
+    }
+
+    .btn:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+    }
+
+
+
+</style>
+<body class=" vh-100 bg-primary-subtle">
+    <div class="mid shadow">
+        <h1 class="text-center h3">Todo</h1>
+
+        <form action="/doto" method="post" class="">
+            {% csrf_token %}
+        <label class="hed">Title</label>
+        <input type="text" placeholder="Name" name="title" class="form-control">
+
+        <label class="hed mt-4">Description</label>
+        <input type="text" placeholder="description" name="desc" class="form-control">
+
+
+        <input type='submit' value="ADD" class="btn my-4 w-100 rounded-pill ">
+
+
+        </form>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
